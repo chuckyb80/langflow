@@ -52,6 +52,7 @@ jobs:
   resolve-release-branch:
     if: github.repository == 'langflow-ai/langflow'
     runs-on: ubuntu-latest
+    permissions: {}
     outputs:
       branch: ${{ steps.get_branch.outputs.branch }}
     steps:
