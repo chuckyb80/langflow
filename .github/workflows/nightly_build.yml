@@ -50,6 +50,7 @@ jobs:
           echo "Cannot skip tests while push_to_registry is true."
           exit 1
   resolve-release-branch:
+    if: github.repository == 'langflow-ai/langflow'
     runs-on: ubuntu-latest
     outputs:
       branch: ${{ steps.get_branch.outputs.branch }}
